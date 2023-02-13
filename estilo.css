@@ -1,0 +1,230 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+/** Este es para resetear los bordes y que las cajas se puedan alinear**/
+:root{
+    --color-header: #ffffff;
+    --color-letraHEader: #1728e2;
+    --color-Fondobotones:#ffffff;
+    --color-Botones1:rgb(255, 119, 0);
+    --colorHoverBoton:#1728e2;
+    --colorLetraBotones:#ffffff;
+    /**texto resumen**/
+    --color_Resumenfondo: #f2f2e79e;
+    --colorTExtoResumen:#000000;
+    /**Texto comentario**/
+    --colorFondoComentario:#ffffff88;
+    --colorTextoComentario:#000000;
+    /**Texto Referencias**/
+    --colorFondoReferencias:#ffffff96;
+    --colorTextoReferencias:#000000; 
+    /**Footer**/
+    --colorFooter:rgba(5, 137, 149, 0.396);   
+    
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    /**Esto ayuda a que la imagen tenga degradoado**/
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.573) , rgba(0, 0, 0, 0.567)),
+    url("https://images.pexels.com/photos/248533/pexels-photo-248533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    font-family: 'Alice';      
+}
+/** menu de navegacion**/
+
+header{    
+    color: var(--color-letraHEader);    
+    background-color: var(--color-header);           
+    padding: 0% 0% 2% 5%;       
+    margin: 0% 20%;    
+}
+header h1{
+    font-size: 320%;    
+    padding: 5% 0% 0% 20%;
+}
+.sabana{
+    float: right;    
+    position:relative;
+    bottom: 30%;
+    top: 20%;
+    width: 15%;
+    height: 15%;  
+}
+a{
+    text-decoration: none;
+}
+.botones{
+    display: flex;
+    justify-content:center;
+    background-color: var(--color-Fondobotones) ;
+    align-items: center;
+    flex-direction: column;
+    padding: 0% 3%;
+    margin: 0% 20%;
+}
+.btn span{
+    position: relative;
+    z-index:2;
+}
+.btn{
+    background-color: var(--color-Botones1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 140%;
+    color: var(--colorLetraBotones);
+    border: 0px;
+    width: 100%;
+    height: 50px;
+    margin-right: 100px;
+    border-radius: 5px;    
+    cursor: pointer;
+    transition: .5s ease all;
+    overflow: hidden;
+}
+.botones .btn::after{
+    content: "";
+    width: 100%;
+    height: 180%;
+    background-color: var(--colorHoverBoton);
+    position: absolute;
+    z-index: 1;
+    top: -100px;
+    left: 0;
+    transition: .5s ease-in-out all;
+    border-radius: 0px 0px 200% 200%;
+}
+.botones .btn:hover:after{
+    top: 0;
+}
+
+
+
+
+/** Texto Resumen **/
+
+#resumen{    
+    display: flex;
+    flex-direction: column;    
+    justify-content: center; 
+    text-align: justify;   
+    background-color: var(--color_Resumenfondo);
+    padding: 3%;
+    margin: 2% 20% 0%;    
+}
+.titulo_resumen{
+    display: flex;
+    justify-content: center;   
+    color:var(--colorTExtoResumen);
+    height: fit-content;
+    padding: 7%;
+    font-size: 350%; 
+    text-align: center;   
+}
+.textoResumen{
+    font-size: 150%;    
+    color: var(--colorTExtoResumen);
+        
+}
+
+/**comentario**/
+#comentario{
+    display: flex;
+    flex-direction: column;    
+    justify-content: center; 
+    text-align: justify;
+    background-color: var(--colorFondoComentario);
+    padding: 3%;
+    margin: 2% 20% 0%;  
+}
+.titulo_comentario{
+    display: flex;
+    justify-content: center;  
+    color:var(--colorTextoComentario);
+    height: fit-content;
+    padding: 7%;
+    font-size: 350%; 
+    text-align: center;  
+}
+.comentario{
+    font-size: 150%;    
+    color: var(--colorTextoComentario);
+}
+
+/** REferencias**/
+#referencias{
+    display: flex;
+    flex-direction: column;    
+    justify-content: center; 
+    text-align: justify;
+    background-color: var(--colorFondoReferencias);
+    padding: 3%;
+    margin: 2% 20% 0%;
+}
+.tituloReferncias{
+    display: flex;
+    justify-content: center; 
+    color:var(--colorTextoReferencias);
+    height: fit-content;
+    padding: 7%;
+    font-size: 350%; 
+    text-align: center;
+}
+.ref{
+    color: var(--colorTextoReferencias);
+    padding: 0% 0% 0% 10%;
+    font-size: 120%;
+}
+/**footer**/
+footer{
+    background-color: var(--colorFooter);
+    padding-bottom: 0.1px;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.contact-us{
+    width: 40%;
+    color: #ffffff;
+    
+}
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+}
+.brand+p{
+    font-weight: 500px;
+}
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+.social-media-icon:hover{
+    background-color: #fff;
+    color: aqua;
+}
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
